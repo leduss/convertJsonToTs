@@ -101,7 +101,7 @@ export default function Home() {
             placeholder={JSON.stringify(placeholder, null, 2)}
             value={jsonInput}
             onChange={handleInputChange}
-            className="w-full h-full p-2 text-xs"
+            className="w-full h-full p-2"
             onKeyDown={handleKeyDown}
             style={{
               resize: 'none',
@@ -118,7 +118,7 @@ export default function Home() {
             <p className="text-sm break-all">{error}</p>
           ) : (
             <pre
-              className="w-full overflow-none text-xs"
+              className="w-full overflow-none"
               dangerouslySetInnerHTML={{ __html: tsOutput }}
             ></pre>
           )}
