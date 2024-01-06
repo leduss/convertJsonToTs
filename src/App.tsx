@@ -61,7 +61,7 @@ export default function Home() {
   const lines = jsonInput.split('\n').map((_, index) => index + 1);
   const lineNumbers = lines.map((line) => (
     <div
-      className={`text-xs ${errorLineNumber === line ? 'text-red-500' : ''}`}
+      className={`text-sm ${errorLineNumber === line ? 'text-red-500' : ''}`}
       key={line}
     >
       {jsonInput === '' ? '' : line}
@@ -93,7 +93,7 @@ export default function Home() {
       <div className="flex h-full w-full gap-6">
         <div className={`flex w-1/2 ${jsonInput !== '' ? 'gap-2' : ''}`}>
           {jsonInput !== '' ? (
-            <div className="line-numbers mt-[9.5px] h-full overflow-y-auto">
+            <div className="line-numbers mt-[9.5px] h-full overflow-y-auto text-lg">
               {lineNumbers}
             </div>
           ) : null}
